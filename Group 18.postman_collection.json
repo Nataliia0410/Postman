@@ -63,7 +63,8 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							""
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\", jsonData.token);"
 						],
 						"type": "text/javascript"
 					}
