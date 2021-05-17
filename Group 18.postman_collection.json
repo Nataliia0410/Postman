@@ -580,7 +580,7 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"//1) Можете взять любой объект из присланного списка, используйте js random.",
+							"//1) Можете  взять любой объект из присланного списка, используйте js random.",
 							"const namData = pm.response.json();",
 							"let object = namData[Math.floor(Math.random ()*namData.length)];",
 							"",
