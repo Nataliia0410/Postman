@@ -1,0 +1,1660 @@
+{
+	"info": {
+		"_postman_id": "fc8bf4cc-3c3e-4455-b8f1-fd116104280e",
+		"name": "AGE_USA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Class_0-20_age_usa_-1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"underage\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(8)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "-1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_0-20_age_usa_0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"underage\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(8)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_0-20_age_usa_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"underage\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(8)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_0-20_age_usa_11",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"underage\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(8)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_0-20_age_usa_19",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"underage\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(8)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "19",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_0-20_age_usa_21",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "21",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_21-50_age_usa_20",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"underage\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(8)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_21-50_age_usa_21",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "21",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_21-50_age_usa_22",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"adult\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(17)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "22",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_21-50_age_usa_31",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"adult\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(17)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "31",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_21-50_age_usa_49",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"adult\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(17)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "49",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_21-50_age_usa_50",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_21-50_age_usa_51",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"antiquity\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(8)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "51",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_50-100_age_usa_49",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"adult\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(17)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "49",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_50-100_age_usa_50",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_50-100_age_usa_51",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"antiquity\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(8)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "51",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_50-100_age_usa_72",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"antiquity\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(8)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "72",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_50-100_age_usa_99",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//тест на то чтобы вернулся правильный класс этого человека\r",
+							"pm.test(\"Right class\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.equal((\"antiquity\"))\r",
+							"          //  if ((jsonData.age >= 18) && (jsonData.age <=50))\r",
+							"           // console.log(jsonData)\r",
+							"    ;\r",
+							"});\r",
+							"//подсчитываем количество елементов вернувшиеся в списке\r",
+							"pm.test(\"number of elements\", function () {\r",
+							"    var jsonData= pm.response.json();\r",
+							"//pm.expect(+jsonData.length).to.eql(NaN)\r",
+							"pm.expect(+jsonData.content.length).to.eql(8)\r",
+							"console.log(jsonData)\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//проверяем структуру json\r",
+							"var schema ={\r",
+							"\"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"age\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"age_type\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": [\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      ]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"age\",\r",
+							"    \"age_type\",\r",
+							"    \"content\"\r",
+							"  ]\r",
+							"}\r",
+							"    pm.test('Json is valid', function () {\r",
+							"    pm.expect(tv4.validate(JSON.parse(responseBody), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "99",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_50-100_age_usa_100",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class_50-100_age_usa_101",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "101",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/age_usa",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
